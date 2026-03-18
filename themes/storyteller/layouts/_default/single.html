@@ -1,0 +1,18 @@
+{{ define "main" }}
+<article class="story-single">
+  <header class="story-header">
+    <h1>{{ .Title }}</h1>
+    <div class="story-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+      {{ with .Params.attractor }}<span class="attractor-tag">{{ . }}</span>{{ end }}
+    </div>
+  </header>
+  <div class="story-body">
+    {{ .Content }}
+  </div>
+  <nav class="story-nav">
+    {{ with .PrevInSection }}<a href="{{ .RelPermalink }}" class="nav-prev">&larr; {{ .Title }}</a>{{ end }}
+    {{ with .NextInSection }}<a href="{{ .RelPermalink }}" class="nav-next">{{ .Title }} &rarr;</a>{{ end }}
+  </nav>
+</article>
+{{ end }}

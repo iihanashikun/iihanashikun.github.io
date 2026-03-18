@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="site-frame">
+    <header class="site-header">
+      <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <small>&copy; {{ now.Format "2006" }} {{ .Site.Title }}</small>
+    </footer>
+  </div>
+</body>
+</html>

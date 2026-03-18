@@ -1,0 +1,7 @@
+name = "storyteller"
+license = "MIT"
+description = "Anti-AI-Feel minimal reading theme"
+min_version = "0.100.0"
+
+[author]
+  name = "X_BeautifulTeller"

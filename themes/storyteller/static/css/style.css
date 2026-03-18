@@ -1,0 +1,240 @@
+:root {
+  --fg: #1a1a1a;
+  --fg-soft: #555;
+  --bg: #f6f4f0;
+  --bg-paper: #fffef9;
+  --accent: #8b4513;
+  --border: #d4cfc6;
+  --font-body: "Shippori Mincho", "游明朝", serif;
+  --font-ui: "Zen Kaku Gothic New", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 2;
+  min-height: 100vh;
+}
+
+.site-frame {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+}
+
+/* ── Header ── */
+
+.site-header {
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--fg-soft);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+}
+
+/* ── Home ── */
+
+.home-hero {
+  margin-bottom: 5rem;
+}
+
+.home-lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.2;
+  letter-spacing: 0.08em;
+  color: var(--fg);
+}
+
+/* ── Story List ── */
+
+.story-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.story-entry a {
+  display: block;
+  padding: 1.6rem 0;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s;
+}
+
+.story-entry:first-child a {
+  border-top: 1px solid var(--border);
+}
+
+.story-entry a:hover {
+  background: var(--bg-paper);
+}
+
+.story-entry h2 {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.7;
+  margin-bottom: 0.3rem;
+}
+
+.story-entry time {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--fg-soft);
+  letter-spacing: 0.05em;
+}
+
+.attractor-tag {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--accent);
+  margin-left: 0.8em;
+}
+
+/* ── Single Story ── */
+
+.story-single {
+  background: var(--bg-paper);
+  padding: 3rem 2rem 4rem;
+  margin: -1rem -0.5rem 0;
+  border-radius: 2px;
+}
+
+.story-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.story-header h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+.story-meta {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--fg-soft);
+}
+
+.story-meta time {
+  letter-spacing: 0.04em;
+}
+
+.story-body {
+  font-size: 1rem;
+  line-height: 2.1;
+  letter-spacing: 0.03em;
+}
+
+.story-body p {
+  margin-bottom: 1.8em;
+  text-indent: 1em;
+}
+
+.story-body p:first-child {
+  text-indent: 0;
+}
+
+.story-body p:first-child::first-letter {
+  font-size: 2.4em;
+  float: left;
+  line-height: 1;
+  margin-right: 0.08em;
+  margin-top: 0.08em;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.story-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.2em;
+  margin: 2em 0;
+  font-style: italic;
+  color: var(--fg-soft);
+}
+
+.story-body hr {
+  border: none;
+  text-align: center;
+  margin: 3em 0;
+}
+
+.story-body hr::after {
+  content: "* * *";
+  font-size: 0.85rem;
+  color: var(--border);
+  letter-spacing: 0.5em;
+}
+
+/* ── Navigation ── */
+
+.story-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+}
+
+.story-nav a {
+  color: var(--fg-soft);
+  text-decoration: none;
+  max-width: 45%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.story-nav a:hover {
+  color: var(--accent);
+}
+
+/* ── Footer ── */
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  color: var(--fg-soft);
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  html { font-size: 15px; }
+  .site-frame { padding: 2rem 1rem 3rem; }
+  .story-single { padding: 2rem 1.2rem 3rem; margin: 0 -0.2rem; }
+  .home-lead { font-size: 1.25rem; }
+  .story-header h1 { font-size: 1.3rem; }
+}

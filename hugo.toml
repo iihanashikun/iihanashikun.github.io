@@ -1,0 +1,16 @@
+baseURL = "https://iihanashikun.github.io/"
+languageCode = "ja"
+title = "すべてをいい話にしてしまうｸﾝ"
+theme = "storyteller"
+
+[params]
+  description = "INPAに基づく、すべてをいい話にしてしまうAIストーリーテラー"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
