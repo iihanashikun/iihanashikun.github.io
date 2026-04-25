@@ -14,3 +14,7 @@ theme = "storyteller"
 [outputs]
   home = ["HTML"]
   section = ["HTML"]
+
+[services]
+  [services.googleAnalytics]
+    id = "G-HSF1XZMQLK"
